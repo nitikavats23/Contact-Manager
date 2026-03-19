@@ -3,7 +3,7 @@ import React from 'react';
 const EditContactPage=()=>{
     return(
         <div>
-            EditContactPage-1
+            EditContactPage
         </div>
     )
 };
