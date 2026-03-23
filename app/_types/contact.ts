@@ -1,6 +1,6 @@
-export interface ContactType{
-    id:number;
-    name:string;
-    email:string;
-    userId:string;
+export interface ContactType {
+  id: string;
+  name: string;
+  email: string;
+  userId: number;
 }

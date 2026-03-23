@@ -1,18 +1,25 @@
 {
   "contacts": [
     {
-      "id": 1,
-      "name": "John Doe",
-      "email": "john@test.com",
+      "id": "1774263085359",
+      "name": "TEJASV KUMAR",
+      "email": "guptatejasv86086@gmail.com",
+      "userId": 1
+    },
+    {
+      "id": "1774263113720",
+      "name": "Nitika",
+      "email": "nitika@gmail.com",
       "userId": 1
     }
   ],
   "users": [
     {
-      "id": 1,
+      "id": "1",
       "name": "user1",
       "email": "user1@gmail.com",
       "password": 123456
     }
-  ]
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
 }
