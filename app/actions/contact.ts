@@ -3,6 +3,7 @@ import { revalidatePath } from "next/cache";
 import { createContact, deleteContact } from "../api/contact";
 import { getSession } from "../lib/session";
 import { ContactType } from "../_types/contact";
+import { redirect } from "next/navigation";
 
 export const createContactAction = async (
   prevState: unknown,
@@ -23,11 +24,12 @@ export const createContactAction = async (
   };
   try {
     await createContact(newContact);
-    revalidatePath("/contact");
     return { success: true };
   } catch (error) {
     console.log("error creating contact:", error);
     return { error: "failed to create contact" };
+  } finally {
+    redirect("/contact");
   }
 };
 
