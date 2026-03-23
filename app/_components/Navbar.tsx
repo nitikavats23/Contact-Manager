@@ -1,9 +1,13 @@
 import React from 'react';
 import Link from "next/link";
 import LogoutButton from './LogoutButton';
+import { getSession } from '../lib/session';
 
-const Navbar=()=>{
-    const session=false;
+
+const Navbar = async()=> {
+    const session= await getSession();
+    
+
     return(
         <nav className="bg-white shadow-sm">
             <div className="container mx-auto p-4 flex justify-between items-center">
@@ -11,12 +15,13 @@ const Navbar=()=>{
                  Contact Manager</Link>
                  <div className="flex items-center space-x-4">
                     {session ? (
-                    <>
+                        <>
                         <Link href="/contact" className="hover:text-blue-800 mr-8">
                             Contacts
                         </Link>
                         <LogoutButton/>
-                    </>   
+                        
+                        </>   
                     ):(
                         <>
                         <Link href="/login" className="hover:text-blue-600 mr-5">
