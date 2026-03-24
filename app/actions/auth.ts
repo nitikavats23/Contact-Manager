@@ -36,7 +36,7 @@ console.log('---------------------------->', email, password)
    
 
   } catch (error) {
-    console.error("❌ Login error:", error);
+    console.error(" Login error:", error);
     // throw new Error("Invalid email or password");
   }finally{
      redirect("/contact");
@@ -75,13 +75,17 @@ try {
     if (!res.ok) {
       return { error: "Registration failed" };
     }
-
+    // redirect('/login')
     return { success: "User registered successfully " };
     
     
   } catch(err) {
     console.log("ERROR:", err);
     return { error: "Server error" };
+  }finally{
+    setTimeout(()=>{
+       redirect('/login')
+    }, 5000)
   }
   
 };

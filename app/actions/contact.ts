@@ -13,10 +13,11 @@ export const createContactAction = async (
     return { error: `Form data is missing` };
   }
   const user = await getSession();
-
+console.log('get session user detatis----------------------------------->',user);
   if (!user?.id) return;
 
   const newContact: ContactType = {
+    manager: String(user.id),
     id: String(Date.now()),
     name: String(formData.get("name")),
     email: String(formData.get("email")),
@@ -43,6 +44,7 @@ export const updateContactAction = async (
   if (!user?.id) return;
 
   const updatedContact: ContactType = {
+     manager: String(user.id),
     id: String(Date.now()),
     name: String(formData.get("name")),
     email: String(formData.get("email")),

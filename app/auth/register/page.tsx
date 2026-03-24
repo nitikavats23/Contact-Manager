@@ -12,7 +12,7 @@ const RegisterPage = () => {
   useEffect(() => {
     
   if (state?.success) {
-    router.push("/_components/ContactForm");
+    router.push("/auth/login");
   }
 }, [state,router]);
 

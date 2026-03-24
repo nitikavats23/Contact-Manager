@@ -29,6 +29,12 @@
       "name": "Nikita Vats",
       "email": "nikita@gmail.com",
       "userId": 1
+    },
+    {
+      "id": "1774334190108",
+      "name": "Pinky Yadav",
+      "email": "pinky.yadav@nldc.com",
+      "userId": 5406
     }
   ],
   "users": [
@@ -37,8 +43,43 @@
       "name": "user1",
       "email": "user1@gmail.com",
       "password": 123456
+    },
+    {
+      "id": "ad25",
+      "name": "Khushi",
+      "email": "khushi@gmail.com",
+      "password": 12345
+    },
+    {
+      "id": "e734",
+      "name": "NITIKA",
+      "email": "nitika@gmail.com",
+      "password": 1234567
+    },
+    {
+      "id": "aa47",
+      "name": "Ayush Bhaitya",
+      "email": "ayush.bhatia@nldc.com",
+      "password": 12345
+    },
+    {
+      "id": "914d",
+      "name": "Pinky Yadav",
+      "email": "pinky.yadav@nldc.com",
+      "password": 12345
+    },
+    {
+      "id": "105d",
+      "name": "asdf",
+      "email": "asdf@gmail.com",
+      "password": 123456
+    },
+    {
+      "id": "5406",
+      "name": "Nitika",
+      "email": "asdf@gmail.com",
+      "password": 12345
     }
-    
   ],
   "$schema": "./node_modules/json-server/schema.json"
 }
