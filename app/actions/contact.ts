@@ -1,6 +1,6 @@
 "use server";
 import { revalidatePath } from "next/cache";
-import { createContact, deleteContact } from "../api/contact";
+import { createContact, deleteContact, updateContact } from "../api/contact";
 import { getSession } from "../lib/session";
 import { ContactType } from "../_types/contact";
 import { redirect } from "next/navigation";
@@ -36,7 +36,29 @@ export const createContactAction = async (
 export const updateContactAction = async (
   prevState: unknown,
   formData: FormData,
-) => {};
+) => {
+  const id=formData.get("id") as string;
+  const user = await getSession();
+
+  if (!user?.id) return;
+
+  const updatedContact: ContactType = {
+    id: String(Date.now()),
+    name: String(formData.get("name")),
+    email: String(formData.get("email")),
+    userId: Number(user.id),
+  };
+  try {
+    await updateContact(id,updatedContact);
+    return { success: true };
+  } catch (error) {
+    console.log("error updating contact:", error);
+    return { error: "failed to update contact" };
+  } finally {
+    redirect("/contact");
+  }
+};
+
 
 export const deleteContactAction = async (
   prevState: unknown,

@@ -47,3 +47,41 @@ export const logoutAction = async () => {
   await deleteSession();
   redirect("/login");
 };
+
+
+
+export const registerAction = async (
+  prevState: unknown,
+  formData: FormData
+) => {
+  const name = formData.get("name") as string;
+  const email = formData.get("email") as string;
+  const password = Number(formData.get("password") );
+
+  if (!name || !email || !password) {
+    return { error: "All fields are required" };
+  }
+
+try {
+    const res = await fetch("http://localhost:3001/users", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ name, email, password }),
+
+    });
+
+    if (!res.ok) {
+      return { error: "Registration failed" };
+    }
+
+    return { success: "User registered successfully " };
+    
+    
+  } catch(err) {
+    console.log("ERROR:", err);
+    return { error: "Server error" };
+  }
+  
+};

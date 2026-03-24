@@ -1,4 +1,4 @@
-import ContactForm from "@/app/_components/ContactFrom";
+import ContactForm from "@/app/_components/ContactForm";
 import { createContactAction } from "@/app/actions/contact";
 import React from "react";
 

@@ -23,6 +23,12 @@
       "name": "Khushi Gupta",
       "email": "guptakhushi1101@gmail.com",
       "userId": 1
+    },
+    {
+      "id": "1774264719366",
+      "name": "Nikita Vats",
+      "email": "nikita@gmail.com",
+      "userId": 1
     }
   ],
   "users": [
@@ -32,6 +38,7 @@
       "email": "user1@gmail.com",
       "password": 123456
     }
+    
   ],
   "$schema": "./node_modules/json-server/schema.json"
 }

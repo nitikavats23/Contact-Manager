@@ -1,4 +1,4 @@
-import ContactForm from '@/app/_components/ContactFrom';
+import ContactForm from '@/app/_components/ContactForm';
 import { updateContactAction } from '@/app/actions/contact';
 import { getContactById } from '@/app/api/contact';
 import React from 'react';
@@ -17,3 +17,5 @@ const EditContactPage=async({params}:{params: Promise<{id:string}>})=>{
 
     )
 }
+
+export default EditContactPage;

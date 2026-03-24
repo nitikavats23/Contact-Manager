@@ -14,6 +14,7 @@ const ContactForm = ({ action, contact }: ContactFormProps) => {
 
   return (
     <form action={formAction} className="space-x-4">
+      <input type="hidden" name="id" value={contact?.id}/>
       <div>
         <label htmlFor="name" className="block text-sm font-medium text-gray-7">
           Name
